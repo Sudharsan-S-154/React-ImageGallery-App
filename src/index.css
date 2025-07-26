@@ -1,13 +1,192 @@
-body {
+/* index.css */
+html,
+body,
+#root {
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app-sun {
+  background-color: whitesmoke;
+  color: black;
+  height: 100%;
+  width: 100%;
+}
+
+.app-moon {
+  background-color: black;
+  color: whitesmoke;
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  padding-top: 0.2rem;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  font-size: 1.5rem;
+  gap: 4rem;
+  cursor: pointer;
+}
+
+.menu-theme {
+  display: flex;
+  /* background-color: yellow; */
+  gap: 1rem;
+  align-items: center;
+}
+
+.menubar {
+  display: flex;
+  font-size: 3rem;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  /* background-color: aqua; */
+  /* flex-basis: 50%; */
+  /* display: none; */
+  /* padding-block: .5rem; */
+  /* height: 30%; */
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 80px;
+  background-color: aliceblue;
+  border-radius: 50% / 100%;
+  margin-inline: 2rem;
+  outline-offset: 1px;
+  outline: 2px solid white;
+  /* border: none; */
+  gap: 1.6rem;
+  background-color: black;
+  position: relative;
+
+  /* flex-basis: 50%  ; */
+}
+
+.moon {
+  transform: scaleX(-1) scale(1.2);
+  cursor: pointer;
+  color: yellow;
+}
+
+.sun {
+  transform: scaleX(-1) scale(1.2);
+  color: yellow;
+  cursor: pointer;
+}
+
+.cover {
+  position: absolute;
+  /* right: 10px; */
+  background-color: white;
+
+  transform: scale(1.35) translateY(-0.5px);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  /* tra */
+}
+
+.selectedMoon {
+  /* transform: translateX(-20px) scale(1.35) translateY(-.5px); */
+  transition: 0.2s linear;
+  left: 50px;
+}
+
+.selectedSun {
+  transition: 0.2s linear;
+  left: 10px;
+}
+
+/*   Main   */
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.caroseuls {
+  margin-top: 0.5rem;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caroseulText {
+  height: auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.bigText {
+  margin-top: 0;
+  font-size: 6rem;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.smallText {
+  text-align: center;
+  font-size: 1.5rem;
+  color: yellow;
+}
+
+.exploreBtn {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  color: white;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.exploreBtn:hover {
+  background-color: yellow;
+  box-shadow: 0 0 5px 2px yellow;
+  color: black;
+}
+
+.btnSlide {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 1rem;
+}
+
+.point {
+  height: 12px;
+  width: 12px;
+  margin-inline: 5px;
+  transform: translateY(15px);
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.currentPic{
+  background-color: yellow;
 }
